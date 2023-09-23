@@ -17,17 +17,8 @@ jobs:
                   import platform
                   print(platform.processor())
               shell: python
-    run-shell-command-check2:
-        runs-on: ubuntu-latest
+    run-windows-command-check2:
+        runs-on: windows-latest
         steps:
-            - name: echo a string
-              run: echo "Hello, Shell"
-            - name: multiline script
-              run: |
-                  node -v
-                  npm -v
-            - name: python Command
-              run: |
-                  import platform
-                  print(platform.processor())
-              shell: python
+            - name: Directory Powershell
+              run: Get-Location
