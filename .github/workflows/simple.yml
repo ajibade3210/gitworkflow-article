@@ -12,3 +12,17 @@ jobs:
               run: |
                   node -v
                   npm -v
+            - name: python Command
+              run: |
+                  import platform
+                  print(platform.processor())
+              shell: python
+    run-windows-command-check:
+        runs-on: windows-lastest
+        needs: ["run-shell-command-check"]
+        steps:
+            - name: Directory PowerShell
+              run: Get-Location
+            - name: Directory Bash
+              run: pwd
+              shell: bash
