@@ -14,7 +14,7 @@ In order to make a job run in series or make a job wait for another job to compl
 #### Using an Actions.
 Actions are some code we or someone else has written that does some specify task, that we can use in our steps in our git workflow.
 
-By having actions we can write less codes. 
+By having actions we can write less codes.
 
 - To use an Action use the **uses** key word.
 - To provide input for actions use the **with** keyword
@@ -23,4 +23,10 @@ Jobs step can return actions outputs...
 To read an action output will
 - first of give the step an **id**
 - then we can `echo "${{ steps.greet.outputs.time }}"`
+
+#### Cloning Repository
+By default github does not clone our repository into out git action folder. To do this we will make use of an action provided to us by git. **@checkout**
+
+this authenticate with the repository, fetchs the code then checkout out into the gitaction folder.
+
 
