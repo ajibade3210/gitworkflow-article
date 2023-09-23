@@ -19,7 +19,6 @@ jobs:
               shell: python
     run-windows-command-check:
         runs-on: windows-lastest
-        needs: ["run-shell-command-check"]
         steps:
             - name: Directory PowerShell
               run: Get-Location
