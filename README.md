@@ -38,4 +38,5 @@ Using external actions...
 
 
 #### Events, Schedules, External Events
+Adding [push, pull_request] event
 
