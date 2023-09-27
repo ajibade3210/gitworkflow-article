@@ -40,3 +40,15 @@ Using external actions...
 #### Events, Schedules, External Events
 Adding [push, pull_request] event
 
+pull_request:
+    types: [closed, assigned, opened, reopened]
+
+Some events have types Push doesn’t, but PR has, We can use the PR types to set when the workflow should run whether on opened/closed, or we we assign a reviewer, or reassign, or reopen
+
+https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
+
+##### Schedules
+To set the schedule
+Use the schedule object key. Which will contain a Cron Array.
+In quotation a CRON schedule expression contains:
+"min hrs dayOfMnth mnth dayOfWeek"
