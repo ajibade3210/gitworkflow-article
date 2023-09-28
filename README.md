@@ -52,3 +52,7 @@ To set the schedule
 Use the schedule object key. Which will contain a Cron Array.
 In quotation a CRON schedule expression contains:
 "min hrs dayOfMnth mnth dayOfWeek"
+
+schedule:
+    - cron: "0/5 * * * *"
+    - cron: "0/6 * * * *"
