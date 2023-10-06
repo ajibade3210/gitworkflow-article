@@ -56,3 +56,19 @@ In quotation a CRON schedule expression contains:
 schedule:
     - cron: "0/5 * * * *"
     - cron: "0/6 * * * *"
+
+##### Filter Pattern Cheat Sheet
+You can use special characters in path, branch and tag filters.
+
+* `*``: Matches zero or more characters,  but does not match the / character. For example, `Octo*` matches `Octocat.
+* `**`: Matches zero or more of any character.
+* `?`: Matches zero or one single character. For example, `Octoc?t` matches `Octocat`.
+* `+`: Matches one or more of the proceeding character.
+* `[]`: Matches one character listed in the brackets or included in ranges. Ranges can only include `a-z`, `A-z`, and `0-9`. For example, the range  `[0-9a-f]` matches any digit or lowercase letter. For example, `[CB]at` matches `Cat` or `Bat` and `[1-2]00` matches `100` and `200`.
+* `!`: At the start of a pattern makes it negate previous positive patterns. It has no special meaning if not the first character.
+
+The characters `*`, `[]`, and `!` are special characters in YAML. If you start a pattern with `*`, `[]`, and `!`, you must enclose the pattern in quotes.
+
+[filter-pattern-cheat-sheet](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#filter-pattern-cheat-sheet)
+
+
