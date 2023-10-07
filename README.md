@@ -57,6 +57,26 @@ schedule:
     - cron: "0/5 * * * *"
     - cron: "0/6 * * * *"
 
+##### Repository Dispatch
+**Post Request**
+https://api.github.com/repos/ajibade3210/gitworkflow-article/dispatches
+
+**Body**
+```json
+{
+    "event_type": "build",
+    "client_payload": {
+        "env": "production"
+    }
+}
+```
+
+**Headers**
+ACCEPT: application/vnd.github.everest-preview+json
+
+**Password**
+Basic Auth: -----
+
 ##### Filter Pattern Cheat Sheet
 You can use special characters in path, branch and tag filters.
 
