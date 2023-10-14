@@ -91,4 +91,7 @@ The characters `*`, `[]`, and `!` are special characters in YAML. If you start a
 
 [filter-pattern-cheat-sheet](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#filter-pattern-cheat-sheet)
 
-
+#### Readings From Environment Variables:
+```bash
+${{ secrets.WF_ENV }}
+```
